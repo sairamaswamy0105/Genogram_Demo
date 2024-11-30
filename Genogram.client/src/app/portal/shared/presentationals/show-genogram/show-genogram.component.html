@@ -1,0 +1,50 @@
+<div>
+  <mat-card style="justify-content: center;align-items: center;background-color: antiquewhite;">
+
+    <h1>Genogram - {{userName}}</h1>
+    <mat-icon class="close-icon" (click)="closeGenogram()">close</mat-icon>
+  </mat-card>
+  <ngx-graph [view]="[600,600]" [links]="links" [nodes]="nodes" layout="dagreCluster">
+    <ng-template #defsTemplate>
+      <svg:marker id="arrow" viewBox="0 -5 10 10" refX="8" refY="0" markerWidth="4" markerHeight="4" orient="auto">
+        <svg:path d="M0,-5L10,0L0,5" class="arrow-head" />
+      </svg:marker>
+    </ng-template>
+
+    <ng-template #nodeTemplate let-node>
+      <svg:g class="node">
+        <!-- Node background rectangle with conditional color based on node id -->
+        <rect [attr.width]="calculateNodeWidth(node.label.trim()) + 40" [attr.height]="node.dimension?.height || 50"
+          [attr.fill]="node.id === '0' ? '#ff4081' : '#ffe6e6'" rx="10" ry="10"></rect>
+
+
+        <!-- Icon inside the node (at the beginning) -->
+        <svg:g class="icon" *ngIf="node.data?.icon">
+          <!-- Position the icon at the left side of the node -->
+          <svg:foreignObject [attr.x]="10" [attr.y]="(node.dimension?.height || 50) / 2 - 10" [attr.width]="20"
+            [attr.height]="20">
+            <mat-icon>{{ node.data?.icon }}</mat-icon>
+          </svg:foreignObject>
+        </svg:g>
+        <!-- Text inside the node -->
+        <svg:text alignment-baseline="middle" [attr.x]="40" [attr.y]="(node.dimension?.height || 50) / 2"
+          [attr.fill]="node.data?.textColor || 'black'" [attr.font-size]="14">
+          {{ node.label }}
+        </svg:text>
+      </svg:g>
+    </ng-template>
+
+    <ng-template #linkTemplate let-link>
+      <svg:g class="edge">
+        <svg:path class="line" stroke-width="2" marker-end="url(#arrow)" [attr.d]="link.d"></svg:path>
+        <svg:text class="edge-label" text-anchor="middle">
+          <textPath class="text-path" [attr.href]="'#' + link.id" [style.dominant-baseline]="link.dominantBaseline"
+            startOffset="50%">
+            {{ link.label }}
+          </textPath>
+        </svg:text>
+      </svg:g>
+    </ng-template>
+  </ngx-graph>
+
+</div>

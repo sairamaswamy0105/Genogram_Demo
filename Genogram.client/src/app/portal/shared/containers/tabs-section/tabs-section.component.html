@@ -1,0 +1,13 @@
+<!-- tabs-section.component.html -->
+<mat-tab-group class="tabs" [selectedIndex]="selectedIndex">
+    <mat-tab disabled label="Admissions"></mat-tab>
+    <mat-tab disabled label="Counseling"></mat-tab>
+    <mat-tab label="Guardians">
+      <app-contacts-section [dataSource]="dataSource" [userId]="userId"></app-contacts-section>
+      <app-contacts-table [dataSource]="dataSource" [displayedColumns]="displayedColumns"></app-contacts-table>
+    </mat-tab>
+    <mat-tab disabled label="Documents"></mat-tab>
+    <mat-tab disabled label="Efforts"></mat-tab>
+    <mat-tab disabled label="Emails"></mat-tab>
+  </mat-tab-group>
+  

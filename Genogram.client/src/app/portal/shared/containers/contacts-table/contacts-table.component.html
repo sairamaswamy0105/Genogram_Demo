@@ -1,0 +1,85 @@
+<div class="containerSearch">
+  <input 
+    matInput 
+    (keyup)="applyFilter($event)" 
+    placeholder="Filter" 
+    style="width: 100%; height: 40px; padding: 10px; font-size: 16px;" 
+  />
+</div>
+
+
+<!-- contacts-table.component.html -->
+<mat-table [dataSource]="matTableDataSource" class="mat-elevation-z8" matSort>
+  <ng-container matColumnDef="edit">
+    <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <button class="editButton" [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" xPosition="after">
+        <button mat-menu-item (click)="openDialogEdit(element)"><mat-icon>edit</mat-icon>Edit</button>
+        <button mat-menu-item (click)="openDialogDelete(element)"><mat-icon>delete</mat-icon>Delete</button>
+      </mat-menu>
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="firstName">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> First Name </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      {{ element.firstName ? element.firstName : '-' }}
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="lastName">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      {{ element.lastName ? element.lastName : '-' }}
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="relationship">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Relationship to the Child </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      {{ element.relationship ? element.relationship : '-' }}
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="phone">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Phone </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      {{ element.phone ? element.phone : '-' }}
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="email">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      {{ element.email ? element.email : '-' }}
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="primaryContact">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Primary Contact </mat-header-cell>
+    <mat-cell *matCellDef="let element" class="custom-checkbox">
+      <ng-container *ngIf="element.primaryContact; else dash">
+        <mat-checkbox [checked]="true" disabled></mat-checkbox>
+      </ng-container>
+      <ng-template #dash>-</ng-template>
+    </mat-cell>
+  </ng-container>
+  
+
+  <ng-container matColumnDef="remarks">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Remarks </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <ng-container *ngIf="element.remarks; else dash">
+        <mat-icon (click)="openDialogChat(element.remarks)">chat</mat-icon>
+      </ng-container>
+      <ng-template #dash>-</ng-template>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+<mat-paginator [pageSizeOptions]="[5,10,20]" showFirstLastButtons></mat-paginator>

@@ -1,0 +1,10 @@
+<!-- contacts-section.component.html -->
+<div class="contacts-section">
+    <button mat-raised-button color="primary" class="add-btn" (click)="openDialog()">
+      <mat-icon>contact_mail</mat-icon> Add
+    </button>
+    <button mat-raised-button color="accent" class="genogram-btn" (click)="openDialogBox()" [disabled]="isDataSourceEmpty()">
+      <mat-icon>assessment</mat-icon> Show Genogram
+    </button>
+  </div>
+  

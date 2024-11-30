@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Configs\" />
+    <Folder Include="Constants\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Interfaces\Data\" />
+    <Folder Include="Interfaces\Mail\" />
+    <Folder Include="Interfaces\Security\" />
+    <Folder Include="Models\Services\Common\" />
+    <Folder Include="Models\Services\EmailTemplate\" />
+    <Folder Include="Models\Services\File\" />
+    <Folder Include="Models\Services\Language\" />
+    <Folder Include="Models\Services\Translation\" />
+    <Folder Include="Models\Services\SystemMessage\" />
+    <Folder Include="Models\Services\Role\" />
+    <Folder Include="Models\Services\Right\" />
+    <Folder Include="Models\Services\Password\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

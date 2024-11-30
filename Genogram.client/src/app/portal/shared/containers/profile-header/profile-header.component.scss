@@ -1,0 +1,80 @@
+.profile-header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffe6e6;
+}
+
+.profile-image img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.profile-info {
+  margin-left: 20px;
+  text-align: left;
+  flex-grow: 1;
+}
+
+.profile-info h2 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.profile-info .edit-icon {
+  margin-left: 10px;
+  font-size: 16px;
+  color: #007bff;
+}
+
+.profile-details {
+  text-align: right; /* Aligns text to the right */
+}
+
+.profile-details p {
+  display: flex;
+  align-items: center;  /* Vertically align icon and text */
+  justify-content: flex-start; /* Align items to the right */
+  gap: 8px;  /* Space between the icon and text */
+  margin: 8px 0;
+}
+
+.profile-details mat-icon {
+  font-size: 20px;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  gap: 8px;  /* Space between the icon and text */
+}
+
+.address mat-icon {
+  font-size: 24px;
+  color: #1976d2;
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.address p {
+  margin: 0; /* Remove default margin from <p> */
+  line-height: 1.5; /* Improve text readability */
+}
+
+.location-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;  /* Space between the icon and text */
+}
+
+.location-link mat-icon {
+  font-size: 20px;
+  color: #1976d2;
+}
+
+.location-link a {
+  text-decoration: none;
+  color: #1976d2;
+}

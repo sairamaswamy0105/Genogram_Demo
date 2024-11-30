@@ -1,0 +1,7 @@
+<!-- parent.component.html -->
+<mat-card class="container" style="margin-top:10px;">
+  <h1><strong>Caregivers</strong></h1>
+  <a class="backtolist" (click)="GotoHome()"><mat-icon>&lt;</mat-icon>Back to the list</a>
+    <app-profile-header [userId]="userId"></app-profile-header>
+    <app-tabs-section [userId]="userId" ></app-tabs-section>
+  </mat-card>

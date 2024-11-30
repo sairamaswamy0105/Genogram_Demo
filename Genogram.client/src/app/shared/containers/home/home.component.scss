@@ -1,0 +1,69 @@
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+    h1 {
+      text-align: center;
+      color: #00796b;
+    }
+  
+    .grid {
+      display: flex;
+      gap: 30px;
+      margin: 20px;
+    }
+  
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: auto; // Ensure the card takes up only as much space as needed
+      max-width: 200px; // Optional: Max width to prevent cards from growing too large
+  
+      .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+  
+      img {
+        max-width: 150px;
+      }
+  
+      p {
+        font-size: 14px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+      }
+  
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+  .createbutton{
+    position: absolute;
+    right: 5px;
+  }
+  img.user-image {
+    width: 150px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border-radius: 10px; /* Optional: For rounded corners */
+    display: block; /* Ensure consistent layout */
+    margin: auto; /* Center the image */
+  }
+  
+  

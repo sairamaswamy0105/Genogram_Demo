@@ -1,0 +1,49 @@
+.mat-column-edit {
+    flex: 0 0 7%;
+  }
+  
+  .mat-column-firstName {
+    flex: 0 0 13%;
+    justify-content: center;
+  }
+  .mat-column-lastName {
+    flex: 0 0 13%;
+    justify-content: center;
+  }
+  .mat-column-relationship {
+    flex: 0 0 20%;
+    justify-content: center;
+  }
+  .mat-column-phone {
+    flex: 0 0 10%;
+    justify-content: center;
+  }
+  .mat-column-email {
+    flex: 0 0 17%;
+    justify-content: center;
+  }
+  .mat-column-primaryContact {
+    flex: 0 0 10%;
+    justify-content: center;
+  }
+  .mat-column-Remarks {
+    flex: 0 0 10%;
+    justify-content: center;
+  }
+  .editButton{
+    background: none;
+    border: none;
+  }
+.custom-firstname{
+  color: blue;
+  cursor: pointer;
+  text-decoration: none;
+}
+.containerSearch
+{
+  position: absolute;
+  right: 23px;
+  top: 14px;
+}
+  
+  

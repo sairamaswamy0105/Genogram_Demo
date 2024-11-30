@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Genogram.API", "Genogram_API\Genogram.API.csproj", "{8A304F70-680F-4246-AF43-0D03BEAA120F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genogram.Application", "Genogram.Application\Genogram.Application.csproj", "{7BD6CE2E-FA4B-480D-A38B-439FB0DD4CB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genogram.Domain", "Genogram.Domain\Genogram.Domain.csproj", "{729053A3-D56D-4EBD-94BE-E6B3BA7A9D40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genogram.Infrastructure", "Genogram.Infrastructure\Genogram.Infrastructure.csproj", "{CAA43284-960C-4B80-A799-8899006497DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A304F70-680F-4246-AF43-0D03BEAA120F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A304F70-680F-4246-AF43-0D03BEAA120F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A304F70-680F-4246-AF43-0D03BEAA120F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A304F70-680F-4246-AF43-0D03BEAA120F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BD6CE2E-FA4B-480D-A38B-439FB0DD4CB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BD6CE2E-FA4B-480D-A38B-439FB0DD4CB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BD6CE2E-FA4B-480D-A38B-439FB0DD4CB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BD6CE2E-FA4B-480D-A38B-439FB0DD4CB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{729053A3-D56D-4EBD-94BE-E6B3BA7A9D40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{729053A3-D56D-4EBD-94BE-E6B3BA7A9D40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{729053A3-D56D-4EBD-94BE-E6B3BA7A9D40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{729053A3-D56D-4EBD-94BE-E6B3BA7A9D40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAA43284-960C-4B80-A799-8899006497DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAA43284-960C-4B80-A799-8899006497DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAA43284-960C-4B80-A799-8899006497DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAA43284-960C-4B80-A799-8899006497DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD6839E0-608A-47E6-AE84-5894D3E86811}
+	EndGlobalSection
+EndGlobal

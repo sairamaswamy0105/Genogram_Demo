@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.custom-checkbox .mdc-checkbox__background
+{
+    border: none !important;
+}
+.custom-checkbox .mdc-checkbox__checkmark{
+    border: none !important;
+    background: white !important;
+    color: black !important;
+}
